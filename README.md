@@ -1,0 +1,1 @@
+Restfull web api application that will return the page and needed layout for a specific device
