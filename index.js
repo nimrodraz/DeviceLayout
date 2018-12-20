@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const pages = require('./routes/pages')
 
-//allow cors  (accept calls from other domains)
+//allow cors (accept calls from other domains)
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
