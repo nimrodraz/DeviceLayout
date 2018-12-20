@@ -16,6 +16,8 @@ router.get('/:id',(req,res)=>{
    
    //get the randomaly selected layout
    const deviceLayoutRatios = deviceLayoutRatiosFactory.getDeviceLayoutRatios();
+   const layoutId = deviceLayoutRatios.GetLayout(device.id);
+
 
     res.send(req.params.id );
 

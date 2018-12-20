@@ -12,8 +12,6 @@ function getDeviceLayoutRatios(){
       cache.put('deviceLayoutRatios',_deviceLayoutRatios);
     }
 
-
-
     return _deviceLayoutRatios;
 }
 
