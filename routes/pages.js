@@ -3,6 +3,7 @@ const router = express.Router();
 const pageFactory = require('../core/page/factory.js');
 const deviceLayoutRatiosFactory = require('../core/deviceLayoutRatios/factory.js');
 const utils = require('../helpers/utils');
+const Layout = require('../core/layout/layout.js');
 
 //route and catch the "api/pages/" with the ID param
 router.get('/:id',(req,res)=>{
@@ -18,8 +19,12 @@ router.get('/:id',(req,res)=>{
    const deviceLayoutRatios = deviceLayoutRatiosFactory.getDeviceLayoutRatios();
    const layoutId = deviceLayoutRatios.GetLayout(device.id);
 
+   //Get layout object and set it to page
+   const layout = new Layout(layoutId);
+   page.Layout = layout;
+   page.Device = device.deviceType;
 
-    res.send(req.params.id );
+    res.send(page);
 
 });
 

@@ -2,15 +2,15 @@ class Page{
     
     constructor(id) {
         this.id = id;
-        this.device="";
-        this.layout="";
-        this.otherContent="";
-        this.menu=[];
+        this.Device="";
+        this.Layout="";
+        this.OtherContent="";
+        this.Menu=[];
       }
 
 
       loadPage(id) {
-        this.menu=[ 
+        this.Menu=[ 
             {id:1, name:'Main page', pageId:100  },    
             {id:2, name:'Login', pageId:101  },  
             {id:3, name:'Register', pageId:102  },  
