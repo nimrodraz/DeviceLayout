@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const pageFactory = require('../core/page/factory.js');
+const utils = require('../helpers/utils');
 
 //route and catch the "api/pages/" with the ID param
 router.get('/:id',(req,res)=>{
@@ -10,6 +11,10 @@ router.get('/:id',(req,res)=>{
    const page = pageFactory.getPage(req.params.id);
 
    //get device
+   const device= utils.getDevice(req);
+   
+   
+   
    //Device device= Utils.GetDevice(System.Web.HttpContext.Current);
 
     res.send(req.params.id );
