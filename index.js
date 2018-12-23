@@ -16,11 +16,11 @@ app.use('/api/pages/',pages);
 //get port for the server..
 //if we have enviorment variable called "PORT" than get use it (like in prod server), if not, set it to 3000 (dev)
 //to set envioment variabled on windows, write on terminal $env:PORT=6000
-const port = process.env.PORT || 4019; 
+const port = process.env.PORT || 4020; 
 
 //run server and listen for web api calls
 app.listen(port, ()=> console.log(`Listening on port ${port} ..`));
 
 
 
-
+   
